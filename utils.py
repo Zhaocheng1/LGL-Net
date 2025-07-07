@@ -30,7 +30,7 @@ def train_one_epoch(model, optimizer, data_loader, device, batch_size):
 
     optimizer.zero_grad()
     total_num = len(data_loader.dataset)
-    adj = torch.tensor(np.load('/home/ubuntu/xiaochunlun2/Diffusion/adj_npy.npy'))
+    adj = torch.tensor(np.load('/home/ubuntu/zc/adj_npy.npy'))
 
     for step, (clinic_image, derm_image, label) in enumerate(data_loader):
         clinic_image = clinic_image.to(device)
